@@ -94,7 +94,7 @@ class GetAttrNode extends Node
                     throw new \RuntimeException(sprintf('Unable to get an item of non-array "%s".', $this->nodes['node']->dump()));
                 }
 
-                return $array[$this->nodes['attribute']->evaluate($functions, $values)];
+                return $array[$this->nodes['attribute']->evaluate($functions, $values)] ?? [];
         }
     }
 
